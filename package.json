@@ -1,0 +1,23 @@
+{
+  "name": "express-mongo-users",
+  "version": "1.0.0",
+  "description": "Express.js server with readymade users database setup using mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "users"
+  ],
+  "author": "Purujit Srinivasan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0"
+  }
+}
