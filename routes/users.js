@@ -4,6 +4,15 @@ const Users = require('../models/userModel');
 var userRouter = express.Router();
 userRouter.use(express.json());
 
+userRouter.get('/', (req, res, next) => {
+    Users.find()
+    .then((user) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type','application/json');
+        res.json(user);
+    })
+});
+
 userRouter.route('/login')
 .get((req, res, next) => {
     res.statusCode = 404;

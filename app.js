@@ -10,6 +10,7 @@ const dbconfig = require('./dbconfig');
 //ROUTER IMPORTS
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
+const zypherRouter = require('./routes/zypher');
 
 var app = express();
 app.use(logger('dev'));
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended:false }));
 //PATHS ROUTER
 app.use('/',indexRouter);
 app.use('/users',userRouter);
+app.use('/zypher',zypherRouter);
 
 //CONNECT TO MONGODB
 //IMPORT MODELS
